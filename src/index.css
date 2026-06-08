@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: #FBF7EE; color: #1A1510; overflow-x: hidden; }
+  html { scroll-behavior: smooth; }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Playfair Display', serif; }
+}
+
+/* Animaciones */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes slideIn  { from { transform:translateX(110%); } to { transform:translateX(0); } }
+@keyframes popIn    { 0% { transform:scale(0.6); opacity:0; } 70% { transform:scale(1.15); } 100% { transform:scale(1); opacity:1; } }
+@keyframes spinAnim { to { transform:rotate(360deg); } }
+
+.animate-fade-up  { animation: fadeUp  0.6s ease both; }
+.animate-slide-in { animation: slideIn 0.35s cubic-bezier(0.32,0,0.15,1) both; }
+.animate-pop-in   { animation: popIn   0.35s cubic-bezier(0.34,1.56,0.64,1) both; }
+.animate-spin-sm  { animation: spinAnim 0.7s linear infinite; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-thumb { background: #F5B800; border-radius: 4px; }
+
+/* Honey line */
+.honey-line { height:2px; background:linear-gradient(90deg,#F5B800,#FFE280,#F5B800); border-radius:9999px; }
+
+/* Aroma drag cards */
+.aroma-card         { cursor:grab; transition: transform 0.18s, box-shadow 0.18s; user-select:none; }
+.aroma-card:hover   { transform:translateY(-3px); }
+.aroma-card.dragging  { opacity:0.45; cursor:grabbing; }
+.aroma-card.drag-over { outline:2px dashed #F5B800; outline-offset:2px; }
+
+/* Nav glassmorphism */
+.nav-scrolled { background:rgba(251,247,238,0.93); backdrop-filter:blur(14px); box-shadow:0 1px 0 rgba(26,21,16,0.07); }
