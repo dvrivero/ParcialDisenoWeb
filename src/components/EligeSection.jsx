@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useCart } from '../context/CartContext'
 import { PRODUCTS, AROMAS } from '../data/products'
-import { formatCOP } from '../utils/format'
+import { formatCOP } from '../hooks/format'
 
 const STEPS = [
   { n: '1', title: 'Humedece',          desc: 'Moja tu cabello y la barra con agua.' },

@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/8 pt-6 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-cream/25">
-          <span>© 2025 HoneyB S.A.S. · Todos los derechos reservados.</span>
+          <span>© {new Date().getFullYear()} HoneyB S.A.S. · Todos los derechos reservados.</span>
           <span>Hecho con ❤ en Colombia</span>
         </div>
       </div>
