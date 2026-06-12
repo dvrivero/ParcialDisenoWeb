@@ -5,10 +5,10 @@ import { useScrolled } from '../hooks/UseScrolled.js'
 import CartDrawer from './CartDrawer.jsx'
 
 const NAV_LINKS = [
-  { href: '/#por-que',     label: 'Por qué HoneyB' },
-  { href: '/#elige',       label: 'Productos' },
-  { href: '/hoteleria',    label: 'Hotelería' },
-  { href: '/#testimonios', label: 'Testimonios' },
+  { href: '#por-que', label: 'Por qué HoneyB' },
+  { href: '#elige', label: 'Productos' },
+  { href: '/hoteleria', label: 'Hotelería' },
+  { href: '#testimonios', label: 'Testimonios' },
 ]
 
 export default function Navbar() {
